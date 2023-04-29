@@ -1,11 +1,37 @@
+:root {
+    --paper-color: #f5d9ae;
+}
+
+/* Theme */
+
 html,
 body {
     height: 100%;
-    background-color: #E0C9A6;
     font-family: Helvetica, sans-serif;
 }
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--paper-color);
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: var(--paper-color);
+    }
+}
+
+/* Content style */
 
 .main-container {
     display: flex;
     justify-content: center;
+}
+
+.content {
+    display: block;
+    width: 80%;
 }
